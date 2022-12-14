@@ -22,6 +22,7 @@ export const Section = styled.div`
     
     .profile{
         width: 100%;
+        height: auto;
 
         .info{
             width: fit-content;
