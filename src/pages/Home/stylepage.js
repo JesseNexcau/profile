@@ -2,34 +2,71 @@ import styled from "styled-components";
 
 
 export const Page = styled.div`
-    width: 100vw;
-    min-height: 100vh;
+    width: 100%;
+    min-height: 300vh;
     height: 100%;
     background-color: #282c34;
+
+    .back{
+        height: 20vh;
+        .cover{
+                
+        }
+
+    }
+
+    /* SOMENTE COM A TELA GRANDE */
+    .sections{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        
+        .mid{
+            grid-area: 1 / 2 / 3 / 3;
+        }
+        .left{
+            grid-area: 2 / 1 / 3 / 2;
+        }
+        .right{
+            grid-area: 2 / 3 / 3 / 4;
+        }
+        .feed{
+            grid-area: 3 / 2 / 4 / 3;
+        }
+    }
 `
 
 export const Section = styled.div`
     margin-left: auto;
     margin-right: auto;
-    max-width: 1000px;
-
-    .img{
-        width: 200px;
-        height: 200px;
-        border-radius: 100%;
-        border: 2px solid purple;
-    }
+    min-width: fit-content;
+    width: calc(100% / 3);
+    
     
     .profile{
         width: 100%;
-        height: auto;
+        display: flex;
+        flex-direction: row;
 
-        .info{
-            width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
-            color: white;
-            text-align: center;
+        .front{
+            padding: 2%;
+            margin-inline: auto;
+                
+            .img{
+                width: 200px;
+                height: 200px;
+                border-radius: 100%;
+                border: 2px solid purple;
+
+            }
+
+            .info{
+                
+                width: fit-content;
+                margin-left: auto;
+                margin-right: auto;
+                color: white;
+                text-align: center;
 
             .name{
                 font-size: x-large;
@@ -46,8 +83,28 @@ export const Section = styled.div`
                 color: aqua;
                 padding: 4px;
             }
+
+            .socials{
+                margin: auto;
+                width: fit-content;
+                a{
+                    color: white;
+                    margin: auto;
+                    padding: 10px;
+                    font-size: xx-large;
+                }
+                display: flex;
+                flex-direction: row;
+            }
+
         }
-        .about{
+        
+        }
+
+        
+    }
+
+    .about{
             padding-top: 20px;
             width: fit-content;
             margin-left: auto;
@@ -66,7 +123,15 @@ export const Section = styled.div`
 
             }
         }
-    }
+`
+
+
+
+
+export const Feed = styled.div`
+    padding: 10px;
+    border: 1px solid rgb(30,30,30);
+    height: 700px;
 `
 
 // ___________// ___________
@@ -78,7 +143,7 @@ export const Image = styled.div`
     height: calc(${props => props.h});
     background-image: url(${props => props.img});
     background-repeat: no-repeat;
-    background-attachment: local;
+    background-attachment: ${props => props.at};
     background-position: center;
     background-size: ${props => props.size};
 `;
