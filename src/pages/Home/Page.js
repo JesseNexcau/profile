@@ -29,7 +29,7 @@ function Home() {
                             <div className="info">
                                 <p className="name">Jessé Gomes</p>
                                 <p className="tag">@jessegomes</p>
-                                <p className="categories">Game Developer - Web Design</p>
+                                <p className="categories">Game Developer - Web Design.</p>
                                 <div className="socials">
                                     <a href="#">
                                         <FontAwesomeIcon icon={faInstagram} />
