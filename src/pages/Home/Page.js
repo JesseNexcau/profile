@@ -1,4 +1,4 @@
-import { Page, Section, Image, Right, Feed } from "./stylepage";
+import { Page, Section, Image, Right, Feed, Link } from "./stylepage";
 import profile from "../../images/profileicon.jpg"
 import bg from "../../images/bg.jpg"
 
@@ -14,13 +14,6 @@ function Home() {
             </div>
 
             <div className="sections">
-                {/* <<<<<<<< PÁGINA DA ESQUERDA */}
-                <Section className="left">
-                    <div className="about">
-                        <button className="btn">Sobre</button>
-                        <div className="content"></div>
-                    </div>
-                </Section>
                 {/* <<<<<<<< PÁGINA DO MEIO >>>>>>>> */}
                 <Section className="mid">
                     <div className="profile">
@@ -46,14 +39,25 @@ function Home() {
                     </div>
                 </Section>
                 {/* PÁGINA DA DIREITA >>>>>>>> */}
-                <Section className="right">
+                {/* <Section className="right">
+                    <div className="about">
+                        <button className="btn">Sobre</button>
+                        <div className="content"></div>
+                    </div>
+                </Section> */}
+                {/* <<<<<<<< PÁGINA DA ESQUERDA */}
+                <Section className="left">
                     <div className="about">
                         <button className="btn">Sobre</button>
                         <div className="content"></div>
                     </div>
                 </Section>
+                {/* ----------------- */}
                 <Feed className="feed">
-
+                    <div className="list">
+                        <Link href="#">Portifólio</Link>
+                        <Link href="#">Portifólio</Link>
+                    </div>
                 </Feed>
             </div>
         </Page>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Page = styled.div`
     width: 100%;
-    min-height: 300vh;
+    min-height: 100vh;
     height: 100%;
     background-color: #282c34;
 
@@ -16,7 +16,8 @@ export const Page = styled.div`
     }
 
     /* SOMENTE COM A TELA GRANDE */
-    .sections{
+    @media only screen and (min-width: 600px){
+        .sections{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -31,9 +32,36 @@ export const Page = styled.div`
             grid-area: 2 / 3 / 3 / 4;
         }
         .feed{
-            grid-area: 3 / 2 / 4 / 3;
+            grid-area: 3 / 1 / 4 / 4;
+            padding: 30px;
         }
     }
+    }
+
+    /* SOMENTE TELA PEQUENA */
+    @media only screen and (max-width: 600px){
+        .sections{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            
+            .mid{
+                grid-area: 1 / 1 / 2 / 2;
+            }
+            .left{
+                grid-area: 2 / 1 / 3 / 2;
+                
+            }
+            .right{
+                grid-area: 3 / 1 / 4 / 2;
+                
+            }
+            .feed{
+                grid-area: 4 / 1 / 5 / 2;
+                padding: 30px;
+            }
+        }
+    }   
 `
 
 export const Section = styled.div`
@@ -129,9 +157,40 @@ export const Section = styled.div`
 
 
 export const Feed = styled.div`
-    padding: 10px;
-    border: 1px solid rgb(30,30,30);
-    height: 700px;
+
+    .list{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+`
+
+export const Link = styled.a`
+    width: 100%;
+    min-width: 300px;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 2px 1px black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    background-color: rgb(255,150,0);
+    color: white;
+
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transition: .2s;
+    :hover{
+        transition: .2s;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
 `
 
 // ___________// ___________
