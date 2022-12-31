@@ -1,6 +1,6 @@
 import { Page, Section, Image, Right, Feed, Link } from "./stylepage";
-import profile from "../../images/profileicon.jpg"
-import bg from "../../images/bg.jpg"
+import profile from "../../images/newprofile.jpg"
+import bg from "../../images/newbg.jpg"
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -21,7 +21,7 @@ function Home() {
                             <Image className="img" at="local" ml="auto" mr="auto" size="contain" w="300px" h="300px" img={profile} />
                             <div className="info">
                                 <p className="name">Jessé Gomes</p>
-                                <p className="tag">@jessegomes</p>
+                                {/* <p className="tag">@jessegomes</p> */}
                                 <p className="categories">Game Developer - Web Design.</p>
                                 <div className="socials">
                                     <a href="#">
@@ -46,17 +46,17 @@ function Home() {
                     </div>
                 </Section> */}
                 {/* <<<<<<<< PÁGINA DA ESQUERDA */}
-                <Section className="left">
+                {/* <Section className="left">
                     <div className="about">
                         <button className="btn">Sobre</button>
                         <div className="content"></div>
                     </div>
-                </Section>
+                </Section> */}
                 {/* ----------------- */}
                 <Feed className="feed">
                     <div className="list">
-                        <Link href="#">Portifólio</Link>
-                        <Link href="#">Portifólio</Link>
+                        <Link href="#">Portfólio</Link>
+                        <Link href="#">Projetos</Link>
                     </div>
                 </Feed>
             </div>

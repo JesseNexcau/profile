@@ -10,7 +10,9 @@ export const Page = styled.div`
     .back{
         height: 20vh;
         .cover{
-                
+            border-bottom: 2px solid rgb(10,230,40);
+            /* box-shadow: inset 0px -25px 10px -15px green;
+            border-bottom: 2px solid green; */
         }
 
     }
@@ -84,7 +86,7 @@ export const Section = styled.div`
                 width: 200px;
                 height: 200px;
                 border-radius: 100%;
-                border: 2px solid purple;
+                border: 2px solid rgb(10,230,40);
 
             }
 
@@ -97,7 +99,7 @@ export const Section = styled.div`
                 text-align: center;
 
             .name{
-                font-size: x-large;
+                font-size: xx-large;
                 font-weight: 500;
                 padding: 4px;
             }
@@ -177,12 +179,15 @@ export const Link = styled.a`
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
-    background-color: rgb(255,150,0);
+    border: 4px solid rgb(10,200,40);
     color: white;
 
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
     transition: .2s;
+
+    
+
     :hover{
         transition: .2s;
         border-top-right-radius: 50px;
