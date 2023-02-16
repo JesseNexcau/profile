@@ -1,65 +1,66 @@
-import { Page, Section, Image, Right, Feed, Link } from "./stylepage";
+import { Page, Section, Image, Link, Text } from "./stylepage";
 import profile from "../../images/newprofile.jpg"
-import bg from "../../images/newbg.jpg"
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faCss3, faFacebook, faHtml5, faInstagram, faNodeJs, faReact, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 function Home() {
     return (
         <Page>
-            <div className="back">
-                <Image className="cover" at="local" size="cover" w="100%" h="140%" img={bg} />
-            </div>
-
-            <div className="sections">
-                {/* <<<<<<<< PÁGINA DO MEIO >>>>>>>> */}
-                <Section className="mid">
-                    <div className="profile">
-                        <div className="front">
-                            <Image className="img" at="local" ml="auto" mr="auto" size="contain" w="300px" h="300px" img={profile} />
-                            <div className="info">
-                                <p className="name">Jessé Gomes</p>
-                                {/* <p className="tag">@jessegomes</p> */}
-                                <p className="categories">Game Developer - Web Design.</p>
-                                <div className="socials">
-                                    <a href="#">
-                                        <FontAwesomeIcon icon={faInstagram} />
-                                    </a>
-                                    <a href="#">
-                                        <FontAwesomeIcon icon={faFacebook} />
-                                    </a>
-                                    <a href="#">
-                                        <FontAwesomeIcon icon={faYoutube} />
-                                    </a>
-                                </div>
-                            </div>
+            <p style={{color: 'white', margin: "auto", width: 'fit-content', padding: '20px'}}>Em Desenvolvimento...</p>
+            <Section >
+                <div className="s-1">
+                    <div className="p-image">
+                        <Image className="img" at="local" size="cover" w="100%" h="100%" img={profile} />
+                    </div>
+                    <div className="r-1">
+                        <div className="info">
+                            <p className="name">Jessé Gomes</p>
+                            {/* <p className="tag">@jessegomes</p> */}
+                            <p className="categories">Game Developer - Web Developer.</p>
+                        </div>
+                        <div className="socials">
+                            <a target="_blank" href="https://instagram.com/ojessegomes">
+                                <FontAwesomeIcon icon={faInstagram} />
+                            </a>
+                            <a target="_blank" href="https://www.tiktok.com/@ojessegomes">
+                                <FontAwesomeIcon icon={faTiktok} />
+                            </a>
+                            <a target="_blank" href="https://www.youtube.com/@ojessegomes">
+                                <FontAwesomeIcon icon={faYoutube} />
+                            </a>
                         </div>
                     </div>
-                </Section>
-                {/* PÁGINA DA DIREITA >>>>>>>> */}
-                {/* <Section className="right">
+                </div>
+                <div className="s-2">
+                    <div className="technologies">
+                        <p className="i">
+                            <FontAwesomeIcon icon={faHtml5} />
+                        </p>
+                        <p className="i">
+                            <FontAwesomeIcon icon={faCss3} />
+                        </p>
+                        <p className="i">
+                            <FontAwesomeIcon icon={faReact} />
+                        </p>
+                        <p className="i">
+                            <FontAwesomeIcon icon={faNodeJs} />
+                        </p>
+
+                    </div>
+                </div>
+
+                <div className="s-3">
                     <div className="about">
-                        <button className="btn">Sobre</button>
-                        <div className="content"></div>
+                        <p>Brasileiro e nativo de Minas Gerais, tenho 18 anos e sempre tive interesse em tecnologia, o que me levou a explorar o mundo da programação. Em 2018, comecei a buscar conhecimento sobre programação e acabei me apaixonando pela área.</p>
                     </div>
-                </Section> */}
-                {/* <<<<<<<< PÁGINA DA ESQUERDA */}
-                {/* <Section className="left">
-                    <div className="about">
-                        <button className="btn">Sobre</button>
-                        <div className="content"></div>
-                    </div>
-                </Section> */}
-                {/* ----------------- */}
-                <Feed className="feed">
-                    <div className="list">
-                        <Link href="#">Portfólio</Link>
-                        <Link href="#">Projetos</Link>
-                    </div>
-                </Feed>
-            </div>
+                </div>
+
+            </Section>
+
+
+
         </Page>
     );
 }
