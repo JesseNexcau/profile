@@ -14,28 +14,17 @@ export const Page = styled.div`
 export const Section = styled.div`
     width: 100%;
     padding: 50px;
+
+    #about::after{
+        content: '';
+        display: block;
+        width: 60%;
+        height: 3px;
+        background-color: rgb(0,180,40);
+    }
     
     
-    .p-image{
-            width: 200px;
-            height: 200px;
-            margin-right: auto;
-                .img{
-                    border: 3px solid green;
-                    border-radius: 100%;
-                }
-        }
-
-        .s-1{
-            .name{
-                    font-size: clamp(0px,7vw,40px);
-                        
-                    }
-                    .categories{
-                        font-size: clamp(18px,3vw,22px);
-                    }
-        }
-
+    
     @media screen and (max-width: 500px){
         padding: 20px;
 
@@ -47,36 +36,84 @@ export const Section = styled.div`
         
     }
 
-    @media screen and (min-width: 0px) {
-
-        max-width: 768px;
+        max-width: 1000px;
         margin: auto;
+
+            .s{
+                margin: auto;
+                width: fit-content;
+                background-color: rgb(0,180,40);
+                padding: 20px;
+                text-align: center;
+                margin-bottom: 30px;
+
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+                border-top-right-radius: 30px;
+
+                p{
+                    color: white;
+                    font-size: 50px;
+                }
+            }
+
         .s-1{
             display: flex;
             flex-direction: row;
+
+            .p-image{
+            width: clamp(180px,50vw,300px);
+            height: clamp(180px,50vw,300px);
+            margin-right: auto;
+                .img{
+                    border: 3px solid green;
+                    border-radius: 100%;
+                }
+            }
             
-            .r-1{
+            .info{
                 padding: 10px;
                 width: fit-content;
                 display: flex;
                 flex-direction: column;
                 margin-right: auto;
                 
-                .info{
+                .indentify{
                     color: white;
-                    margin-right: auto;
-                }
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin-bottom: 30px;
 
+                    .name{
+                    font-size: clamp(18px,10vw,50px);
+                        
+                    }
+                    .categories{
+                    font-size: clamp(16px,8vw,40px);
+                    }
+
+                }                
+
+
+                
+                
                 .socials{
                     display: flex;
                     width: 100%;
-                    margin-right: auto;
-                    padding-top: 20px;
+                    margin-bottom: 30px;
                     a{
-                        margin: auto;
-                        margin-left: 0;
+                        margin-right: 30px;
                         color: white;
                         font-size: 30px;
+                    }
+                }
+                
+                .contact{
+                    color: white;
+                    font-size: 18px;
+                    p{
+                        margin-bottom: 10px;
                     }
                 }
                 
@@ -84,27 +121,57 @@ export const Section = styled.div`
             
         }
 
-        .s-2{
+        .skills{
+            margin-top: 30px;
+            margin-bottom: 30px;
             width: 100%;
-            border-bottom: 2px solid white;
+            
             .technologies{
-                padding-top: 20px;
-                width: 100%;
+                color: white;
                 display: flex;
-                flex-direction: row;
+                flex-wrap: wrap;
                 
-                .i{
-                    padding: 14px;
-                    margin: auto;
-                    color: white;
-                    font-size: 40px;
-                    
+
+                .techno{
+                    flex-basis: 30.33%;
+                    display: flex;
+                    font-size: 22px;
+                    font-weight: bold;
+                    padding: 6px;
+                    border: 2px solid white;
+                    margin: 10px;
+                    margin-inline: auto;
+
+                    p{
+                        padding: 4px;
+                    }
+                }
+                
+                .html{
+                    background-color: rgb(0,180,40);
+                }
+                .css{
+                    background-image: linear-gradient(to right, rgb(0,180,40) 80%, transparent 10%);
+                }
+                .react{
+                    background-image: linear-gradient(to right, rgb(0,180,40) 70%, transparent 10%);
+                }
+                .node{
+                    background-image: linear-gradient(to right, rgb(0,180,40) 30%, transparent 10%);
+                }
+                .js{
+                    background-image: linear-gradient(to right, rgb(0,180,40) 70%, transparent 10%);
+                }
+                .tps{
+                    background-image: linear-gradient(to right, rgb(0,180,40) 30%, transparent 0%);
                 }
             }
         }
 
         .s-3{
             width: 100%;
+            margin-top: 20px;
+            margin-bottom: 30px;
             .about{
                 padding: 20px;
                 color: white;
@@ -113,7 +180,7 @@ export const Section = styled.div`
                 }
             }
         }
-    }
+    
 
 `
 
