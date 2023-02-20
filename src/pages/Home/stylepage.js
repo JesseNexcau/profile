@@ -14,48 +14,58 @@ export const Page = styled.div`
 export const Section = styled.div`
     width: 100%;
     padding: 50px;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
 
-    #about::after{
-        content: '';
-        display: block;
-        width: 60%;
-        height: 3px;
-        background-color: rgb(0,180,40);
-    }
     
-    
-    
-    @media screen and (max-width: 500px){
-        padding: 20px;
-
-        .p-image{
-            width: 70%;
-            height: auto;
+    .divide{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-block: 30px;
+        .txt{
+            color: white;
+            font-size: 30px;
+            padding: 20px;
+            border: 2px solid;
+            border-image: linear-gradient(to bottom right, rgb(0,180,40) 30%, transparent 30%, transparent 70%, rgb(0,180,40) 70%) 1;
             
         }
+
         
     }
-
-        max-width: 1000px;
+    .divider{
+        width: 30%;
+        height: 2px;
         margin: auto;
+        
+        border-bottom: 1px solid rgb(0,180,40);
+    }
+        
 
             .s{
-                margin: auto;
-                width: fit-content;
-                background-color: rgb(0,180,40);
-                padding: 20px;
-                text-align: center;
-                margin-bottom: 30px;
+                display: flex;
 
-                border-top-left-radius: 30px;
-                border-bottom-left-radius: 30px;
-                border-top-right-radius: 30px;
-
+                
                 p{
+                    margin: auto;
+                    width: fit-content;
+                    background-color: rgb(0,180,40);
+                    padding: 16px;
+                    text-align: center;
+                    margin-bottom: 30px;
+    
+                    border-top-left-radius: 24px;
+                    border-bottom-left-radius: 24px;
+                    border-top-right-radius: 24px;
                     color: white;
-                    font-size: 50px;
+                    font-size: 30px;
                 }
             }
+
+            
 
         .s-1{
             display: flex;
@@ -66,7 +76,7 @@ export const Section = styled.div`
             height: clamp(180px,50vw,300px);
             margin-right: auto;
                 .img{
-                    border: 3px solid green;
+                    /* border: 3px solid rgb(0,180,40); */
                     border-radius: 100%;
                 }
             }
@@ -90,6 +100,7 @@ export const Section = styled.div`
                         
                     }
                     .categories{
+                    color: #ccc;
                     font-size: clamp(16px,8vw,40px);
                     }
 
@@ -125,15 +136,16 @@ export const Section = styled.div`
             margin-top: 30px;
             margin-bottom: 30px;
             width: 100%;
+            display: flex;
             
             .technologies{
                 color: white;
                 display: flex;
                 flex-wrap: wrap;
-                
+                width: 50%;
 
                 .techno{
-                    flex-basis: 30.33%;
+                    width: 180px;
                     display: flex;
                     font-size: 22px;
                     font-weight: bold;
@@ -166,12 +178,36 @@ export const Section = styled.div`
                     background-image: linear-gradient(to right, rgb(0,180,40) 30%, transparent 0%);
                 }
             }
+
+            
+            .about{
+                width: 50%;
+                color: white;
+                padding: 20px;
+            }
         }
 
         .s-3{
             width: 100%;
             margin-top: 20px;
             margin-bottom: 30px;
+            
+            .about-a{
+                color: white;
+                display: flex;
+                justify-content: center;
+
+                .opt{
+                    background-color: rgb(35,35,35);
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    
+                    margin-inline: 20px;
+                    padding: 16px;
+                    border-bottom: 2px solid rgb(0,180,40);
+                }
+            }
+
             .about{
                 padding: 20px;
                 color: white;
