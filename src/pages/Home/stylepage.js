@@ -19,6 +19,23 @@ export const Section = styled.div`
     display: flex;
     flex-direction: column;
 
+    @media screen and (max-width: 500px){
+        padding: 20px;
+
+        .s-1{
+            display: flex;
+            flex-direction: column-reverse !important;
+
+            .socials{
+                justify-content: center !important;
+            }
+            .contact{
+                text-align: center !important;
+            }
+            
+        }
+    }
+
     
     .divide{
         width: 100%;
@@ -61,7 +78,7 @@ export const Section = styled.div`
                     border-bottom-left-radius: 24px;
                     border-top-right-radius: 24px;
                     color: white;
-                    font-size: 30px;
+                    font-size: clamp(0px,5vw,30px);
                 }
             }
 
@@ -70,11 +87,12 @@ export const Section = styled.div`
         .s-1{
             display: flex;
             flex-direction: row;
-
+            
             .p-image{
-            width: clamp(180px,50vw,300px);
-            height: clamp(180px,50vw,300px);
-            margin-right: auto;
+            width: clamp(280px,90vw,300px);
+            height: clamp(280px,90vw,300px);
+            margin: auto;
+            
                 .img{
                     /* border: 3px solid rgb(0,180,40); */
                     border-radius: 100%;
@@ -86,7 +104,7 @@ export const Section = styled.div`
                 width: fit-content;
                 display: flex;
                 flex-direction: column;
-                margin-right: auto;
+                margin: auto;
                 
                 .indentify{
                     color: white;
@@ -113,6 +131,7 @@ export const Section = styled.div`
                     display: flex;
                     width: 100%;
                     margin-bottom: 30px;
+                    justify-content: initial;
                     a{
                         margin-right: 30px;
                         color: white;
@@ -123,6 +142,7 @@ export const Section = styled.div`
                 .contact{
                     color: white;
                     font-size: 18px;
+                    text-align: initial;
                     p{
                         margin-bottom: 10px;
                     }
@@ -195,14 +215,18 @@ export const Section = styled.div`
             .about-a{
                 color: white;
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: center;
 
                 .opt{
+                    width: 120px;
+                    text-align: center;
                     background-color: rgb(35,35,35);
                     border-top-left-radius: 10px;
                     border-top-right-radius: 10px;
                     
                     margin-inline: 20px;
+                    margin-bottom: 20px;
                     padding: 16px;
                     border-bottom: 2px solid rgb(0,180,40);
                 }
